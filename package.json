@@ -5,13 +5,26 @@
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "react",
+    "translations",
+    "i18n",
+    "internationalization",
+    "language",
+    "translate",
+    "context",
+    "hook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolGubau/translate-react-package"
+  },
   "private": false,
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public"
   },
-  "keywords": [],
   "author": {
     "url": "https://polgubau.com",
     "name": "Pol Gubau Amores",
