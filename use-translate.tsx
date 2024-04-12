@@ -9,14 +9,11 @@ const useTranslate = () => {
       "This App must be used within a TranslationContext, please check the parent component (as Layout). This error is getting thrown by useTranslate custom hook and it is intentional."
     );
   }
-  const { keys, defaultLanguage, translations } = context;
+  const { key, defaultLanguage, translations } = context;
 
   type TranslationsCodes = keyof typeof translations;
 
-  const [lang, setLang] = useLocalStorage(
-    keys.language,
-    defaultLanguage.languageCode
-  );
+  const [lang, setLang] = useLocalStorage(key, defaultLanguage);
 
   const changeLanguage = (lang: TranslationsCodes) => {
     setLang(lang);
@@ -27,7 +24,7 @@ const useTranslate = () => {
    */
   if (!translations[lang]) {
     console.warn(
-      `⚠️ The language "${lang}" is not available in the translations object, falling back to "${defaultLanguage.code}"`
+      `⚠️ The language "${lang}" is not available in the translations object, falling back to "${defaultLanguage}"`
     );
   }
 
@@ -57,7 +54,7 @@ const useTranslate = () => {
   const translate = (
     key: string,
     languageCode: TranslationsCodes = lang,
-    fallbackLanguageCode: TranslationsCodes = defaultLanguage.code
+    fallbackLanguageCode: TranslationsCodes = defaultLanguage
   ): string => {
     /**
     @name languageTranslations
@@ -76,7 +73,7 @@ const useTranslate = () => {
     */
     const languageTranslations =
       translations[languageCode ?? lang] ??
-      translations[fallbackLanguageCode ?? defaultLanguage.code ?? "en"];
+      translations[fallbackLanguageCode ?? defaultLanguage ?? "en"];
 
     const translationValue = languageTranslations[key];
 

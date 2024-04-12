@@ -6,7 +6,7 @@ interface ContextProps {
    * @name keys
    * Keys for the storage of various values in LocalStorage as languages
    */
-  keys: string;
+  key: string;
   defaultLanguage: string;
   translations: Translations;
 }
