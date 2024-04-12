@@ -1,6 +1,6 @@
 {
   "name": "@codedbypol/translate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Npm package to handle translations in client side of React. It consist on a context used to surround your app and a custom hook were the sent key is auto-translated",
   "categories": [
     "Programming Languages"
