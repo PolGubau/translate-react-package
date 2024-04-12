@@ -9,7 +9,7 @@ const useTranslate = () => {
       "This App must be used within a TranslationContext, please check the parent component (as Layout). This error is getting thrown by useTranslate custom hook and it is intentional."
     );
   }
-  const { key, defaultLanguage, translations } = context;
+  const { key = "pol.language", defaultLanguage, translations } = context;
 
   type TranslationsCodes = keyof typeof translations;
 

@@ -1,15 +1,22 @@
 {
   "name": "@codedbypol/translate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Npm package to handle translations in client side of React. It consist on a context used to surround your app and a custom hook were the sent key is auto-translated",
+  "categories": [
+    "Programming Languages"
+  ],
   "private": false,
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "url": "https://polgubau.com",
+    "name": "Pol Gubau Amores",
+    "email": "gubaupol@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "pol-ui": "^2.1.21",
