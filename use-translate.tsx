@@ -2,6 +2,25 @@ import React from "react";
 import { useLocalStorage } from "pol-ui";
 import { TranslationContext } from "./context";
 
+/**
+ * @name useTranslate
+ * @description Custom hook to use the translation context in a functional component or custom hook (it must be used within a TranslationContext) and get the translation of a key based on the current language.
+ * @returns an object with the following properties:
+ * - translate: a function that returns the translation of a key
+ * - lang: a string that represents the current language
+ * - changeLanguage: a function that changes the current language
+ * @example
+ * const { translate, lang, changeLanguage } = useTranslate()
+ * const text = translate('name')
+ * changeLanguage('es')
+ * @see TranslationContext
+ * @see useLocalStorage
+ * @see formatString
+ *
+ * @author Pol Gubau Amores (codedByPol)
+ * @version 1.0.1 (2024-04-12)
+ *
+ */
 const useTranslate = () => {
   const context = React.useContext(TranslationContext);
   if (!context) {
